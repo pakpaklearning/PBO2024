@@ -4,22 +4,22 @@ import java.util.Scanner;
 
 public class Soal1 {
 
-    // menghitung luas permukaan balok
+    //Hitung luas permukaan balok
     public static double hitungLuasPermukaanBalok(double sisi1, double sisi2, double sisi3) {
         return 2 * (sisi1 * sisi2 + sisi1 * sisi3 + sisi2 * sisi3);
     }
 
-    // menghitung volume balok
+    //Hitung volume balok
     public static double hitungVolumeBalok(double sisi1, double sisi2, double sisi3) {
         return sisi1 * sisi2 * sisi3;
     }
 
-    // menghitung luas permukaan bola
+    //Hitung luas permukaan bola
     public static double hitungLuasPermukaanBola(double jariJari) {
         return 4 * Math.PI * Math.pow(jariJari, 2);
     }
 
-    // menghitung volume bola
+    //Hitung volume bola
     public static double hitungVolumeBola(double jariJari) {
         return (4.0 / 3.0) * Math.PI * Math.pow(jariJari, 3);
     }
@@ -29,7 +29,7 @@ public class Soal1 {
         int menu;
 
         do {
-            // Menampilkan menu
+            //Menu
             System.out.println("Hitung Bangun Ruang: ");
             System.out.println("1. Hitung Luas dan Volume Balok");
             System.out.println("2. Hitung Luas dan Volume Bola");
@@ -39,7 +39,7 @@ public class Soal1 {
 
             switch (menu) {
                 case 1:
-                    // Input sisi balok
+                    //Sisi balok
                     System.out.print("Masukkan Sisi 1: ");
                     double sisi1 = s.nextDouble();
                     System.out.print("Masukkan Sisi 2: ");
@@ -47,25 +47,25 @@ public class Soal1 {
                     System.out.print("Masukkan Sisi 3: ");
                     double sisi3 = s.nextDouble();
 
-                    // luas permukaan dan volume balok
+                    //luas permukaan dan volume balok
                     double luasBalok = hitungLuasPermukaanBalok(sisi1, sisi2, sisi3);
                     double volumeBalok = hitungVolumeBalok(sisi1, sisi2, sisi3);
 
-                    // Menampilkan hasil
+                    //Hasil
                     System.out.println("Luas Permukaan Balok: " + luasBalok);
                     System.out.println("Volume Balok: " + volumeBalok);
                     break;
 
                 case 2:
-                    // Input jari-jari bola
+                    //Jari-jari bola
                     System.out.print("Masukkan Jari-Jari Bola: ");
                     double jariJari = s.nextDouble();
 
-                    // luas permukaan dan volume bola
+                    //Luas permukaan dan volume bola
                     double luasBola = hitungLuasPermukaanBola(jariJari);
                     double volumeBola = hitungVolumeBola(jariJari);
 
-                    // Menampilkan hasil
+                    //Hasil
                     System.out.println("Luas Permukaan Bola: " + luasBola);
                     System.out.println("Volume Bola: " + volumeBola);
                     break;
@@ -75,7 +75,7 @@ public class Soal1 {
                     break;
 
                 default:
-                    System.out.println("Pilihan tidak valid, coba lagi.");
+                    System.out.println("Tidak valid, coba lagi.");
                     break;
             }
             System.out.println(); 
